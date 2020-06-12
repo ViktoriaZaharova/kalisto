@@ -260,6 +260,8 @@ header
 .menu-main__nav
   width: 100%
   padding: 0 25px 0 0
+  .address, .form-search, .schedule
+    display: none
 
 .menu-main
   display: flex
@@ -695,8 +697,7 @@ header
       content: ''
       position: absolute
       left: 0
-      top: 50%
-      transform: translate(0,-50%)
+      top: 6px
       width: 8px
       height: 8px
       border: 2px solid $accent
@@ -1488,6 +1489,8 @@ textarea
   max-width: 931px
   position: relative
   margin: 0 auto
+  label
+    width: 100%
   input
     height: auto
     width: 100%

@@ -20,17 +20,9 @@ $('.photo-demonstration__slider').slick({
             }
         },
         {
-            breakpoint: 600,
-            settings: {
-                slidesToShow: 2,
-                slidesToScroll: 2
-            }
-        },
-        {
-            breakpoint: 480,
+            breakpoint: 1040,
             settings: {
                 slidesToShow: 1,
-                slidesToScroll: 1
             }
         }
     ]
@@ -57,17 +49,21 @@ $('.reviews-slider').slick({
             }
         },
         {
-            breakpoint: 600,
+            breakpoint: 1020,
             settings: {
                 slidesToShow: 2,
-                slidesToScroll: 2
+                arrows: false,
+                autoplay: true,
+                autoplaySpeed: 2000,
             }
         },
         {
-            breakpoint: 480,
+            breakpoint: 690,
             settings: {
                 slidesToShow: 1,
-                slidesToScroll: 1
+                arrows: false,
+                autoplay: true,
+                autoplaySpeed: 2000,
             }
         }
     ]
@@ -86,17 +82,30 @@ $('.certificate-slider').slick({
             }
         },
         {
-            breakpoint: 600,
+            breakpoint: 870,
             settings: {
-                slidesToShow: 2,
-                slidesToScroll: 2
+                slidesToShow: 3,
+                arrows: false,
+                autoplay: true,
+                autoplaySpeed: 2000,
             }
         },
         {
-            breakpoint: 480,
+            breakpoint: 640,
+            settings: {
+                slidesToShow: 2,
+                arrows: false,
+                autoplay: true,
+                autoplaySpeed: 2000,
+            }
+        },
+        {
+            breakpoint: 440,
             settings: {
                 slidesToShow: 1,
-                slidesToScroll: 1
+                arrows: false,
+                autoplay: true,
+                autoplaySpeed: 2000,
             }
         }
     ]
@@ -114,20 +123,6 @@ $('.sale-slider').slick({
             settings: {
                 autoplay: true,
                 autoplaySpeed: 2000,
-            }
-        },
-        {
-            breakpoint: 600,
-            settings: {
-                slidesToShow: 2,
-                slidesToScroll: 2
-            }
-        },
-        {
-            breakpoint: 480,
-            settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1
             }
         }
     ]
