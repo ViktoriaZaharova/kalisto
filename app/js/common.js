@@ -137,6 +137,46 @@ $('.main-page__slider').slick({
     infinity: true,
 });
 
+// slick active
+$(window).on('load resize', function() {
+    if ($(window).width() < 1400) {
+        $('.other-services__content:not(.slick-initialized)').slick({
+            infinite: true,
+            slidesToShow: 3,
+            prevArrow: '<button type="button" class="slick-prev"></button>',
+            nextArrow: '<button type="button" class="slick-next"></button>',
+            responsive: [
+                {
+                    breakpoint: 1020,
+                    settings: {
+                        slidesToShow: 2,
+                    }
+                },
+                {
+                    breakpoint: 675,
+                    settings: {
+                        slidesToShow: 1,
+                    }
+                }
+            ]
+        });
+    } else {
+        $(".other-services__content.slick-initialized").slick("unslick");
+    }
+
+    if ($(window).width() < 1199) {
+        $('.clinic-about-video__content:not(.slick-initialized)').slick({
+            infinite: true,
+            slidesToShow: 1,
+            prevArrow: '<button type="button" class="slick-prev"></button>',
+            nextArrow: '<button type="button" class="slick-next"></button>',
+        });
+    } else {
+        $(".clinic-about-video__content").slick("unslick");
+    }
+});
+// slick active
+
 // аккордеон
 $('.panel_heading .block_title').click(function () {
     $(this).toggleClass('in').next().slideToggle();

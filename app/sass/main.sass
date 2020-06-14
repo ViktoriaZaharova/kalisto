@@ -177,6 +177,9 @@ strong
 .p-70
   padding: 70px 0
 
+.pt-70
+  padding: 70px 0 0
+
 .mr-auto
   margin: 0 auto
 
@@ -750,7 +753,7 @@ header
       &:last-child
         margin: 0
 
-.clinic-about__content
+.clinic-about__content, .clinic-about-video__content
   display: flex
   align-items: flex-start
   justify-content: space-between
@@ -1064,6 +1067,8 @@ header
   height: 328px
   img
     transition: .3s ease
+    height: 100%
+    width: auto
   .btn-accent
     position: absolute
     left: 50%
@@ -1753,6 +1758,7 @@ textarea
     content: ''
     right: 0
     width: 23px
+    min-width: 23px
     height: 13px
     background: url("../img/arrow-bottom-black.png") no-repeat center
       size: contain
@@ -1845,6 +1851,8 @@ textarea
   flex-wrap: wrap
   border-bottom: 1px solid rgba(#000,.1)
   padding: 0 0 70px
+  .slick-arrow
+    top: 40%
 
 .other-services__box
   position: relative
@@ -2006,7 +2014,26 @@ textarea
     .price
       color: #ba67a3
 
-
+.btn-selection
+  position: fixed
+  width: 55px
+  height: 308px
+  background: #d49c5f
+  z-index: 5
+  color: #fff
+  display: flex
+  align-items: center
+  justify-content: center
+  font-weight: bold
+  right: 0
+  bottom: 20px
+  border-radius: 20px 0 0 20px
+  span
+    transform: rotate(90deg)
+    white-space: nowrap
+    margin: 0 -10px 0 0
+  &:hover
+    color: #fff
 
 
 

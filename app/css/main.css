@@ -202,6 +202,9 @@ strong {
 .p-70 {
   padding: 70px 0; }
 
+.pt-70 {
+  padding: 70px 0 0; }
+
 .mr-auto {
   margin: 0 auto; }
 
@@ -863,7 +866,7 @@ header {
     .clinic-about .description p:last-child {
       margin: 0; }
 
-.clinic-about__content {
+.clinic-about__content, .clinic-about-video__content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -875,7 +878,7 @@ header {
           justify-content: space-between;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap; }
-  .clinic-about__content h3 {
+  .clinic-about__content h3, .clinic-about-video__content h3 {
     margin: 0 0 23px; }
 
 .why-are {
@@ -1248,7 +1251,9 @@ header {
   height: 328px; }
   .specialist-box__photo img {
     -webkit-transition: .3s ease;
-    transition: .3s ease; }
+    transition: .3s ease;
+    height: 100%;
+    width: auto; }
   .specialist-box__photo .btn-accent {
     position: absolute;
     left: 50%;
@@ -2056,6 +2061,7 @@ textarea {
     content: '';
     right: 0;
     width: 23px;
+    min-width: 23px;
     height: 13px;
     background: url("../img/arrow-bottom-black.png") no-repeat center;
       background-size: contain;
@@ -2184,6 +2190,8 @@ textarea {
       flex-wrap: wrap;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   padding: 0 0 70px; }
+  .other-services__content .slick-arrow {
+    top: 40%; }
 
 .other-services__box {
   position: relative;
@@ -2378,11 +2386,41 @@ textarea {
   .certificate-sale__box:last-child .price {
     color: #ba67a3; }
 
+.btn-selection {
+  position: fixed;
+  width: 55px;
+  height: 308px;
+  background: #d49c5f;
+  z-index: 5;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-weight: bold;
+  right: 0;
+  bottom: 20px;
+  border-radius: 20px 0 0 20px; }
+  .btn-selection span {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+    white-space: nowrap;
+    margin: 0 -10px 0 0; }
+  .btn-selection:hover {
+    color: #fff; }
+
 @media only screen and (max-width: 1650px) {
   .slick-prev {
     left: -50px; }
   .slick-next {
-    right: -50px; } }
+    right: -50px; }
+  .main-page__slider {
+    width: 690px; } }
 
 @media only screen and (max-width: 1400px) {
   .container {
@@ -2414,7 +2452,88 @@ textarea {
   .name-sale {
     font-size: 55px; }
   .join {
-    padding: 160px 0; } }
+    padding: 160px 0; }
+  .main-page__content {
+    max-width: 520px; }
+  h1 {
+    font-size: 40px;
+    padding: 0 0 15px;
+    margin: 0 0 20px; }
+  .menu-scroll {
+    margin: 0 0 30px;
+    max-width: none; }
+  .list-characteristics li {
+    margin: 0 0 15px; }
+  .sale-box {
+    width: 76px;
+    height: 76px;
+    top: 11px;
+    left: 407px;
+    font-size: 25.5px;
+    letter-spacing: 1.28px; }
+    .sale-box:before {
+      width: calc(100% - 6px);
+      height: calc(100% - 6px); }
+    .sale-box sub {
+      font-size: 14px;
+      letter-spacing: 0.7px; }
+  .main-page__slider-description {
+    left: 148px;
+    width: 342px;
+    height: 106px;
+    padding: 16px 50px 18px 21px; }
+    .main-page__slider-description .size-sale {
+      display: none; }
+    .main-page__slider-description .services-sale__name {
+      font-size: 23px;
+      letter-spacing: 1.15px;
+      line-height: 1.2; }
+  .clinic-about-video .clinic-video {
+    width: 490px; }
+  .clinic-about-video .video-box {
+    height: 329px; }
+  .clinic-about-video .bg-overlay3 {
+    width: 403px;
+    height: 330px; }
+  .clinic-about-video .bg-overlay2 {
+    width: 432px;
+    height: 331px; }
+  .clinic-about-video .bg-overlay1 {
+    width: 461px;
+    height: 331px; }
+  .clinic-about .description {
+    margin: 86px 0 0; }
+  .tools-services__box ul li {
+    width: 50%; }
+  .other-services__box {
+    margin: 0 auto; }
+  .answer-doctor {
+    display: none; }
+  .popular-question__box {
+    width: 100%;
+    margin: 0 0 70px; }
+  .certificate-sale__box {
+    width: 321px;
+    height: 229px;
+    padding: 29px 20px; }
+    .certificate-sale__box:before {
+      width: 301px;
+      height: 207px; }
+    .certificate-sale__box:after {
+      width: 166.5px;
+      height: 159.5px; }
+    .certificate-sale__box .name-company {
+      width: 174px; }
+    .certificate-sale__box h3 {
+      font-size: 33px;
+      letter-spacing: 3.3px; }
+    .certificate-sale__box .price {
+      letter-spacing: 3.7px;
+      font-size: 37px;
+      padding: 15px 0; }
+      .certificate-sale__box .price:before, .certificate-sale__box .price:after {
+        width: 186px;
+        height: 23px; } }
 
 @media only screen and (max-width: 1320px) {
   .form label {
@@ -2430,7 +2549,9 @@ textarea {
   .slick-next {
     right: -10px; }
   .photo-demonstration__slider {
-    padding: 0 20px 56px; } }
+    padding: 0 20px 56px; }
+  .main-page__slider {
+    right: -120px; } }
 
 @media only screen and (max-width: 1199px) {
   header .list-social, header .btn-search {
@@ -2504,7 +2625,7 @@ textarea {
     padding: 0 0 35px; }
   .clinic-about {
     padding: 70px 0 130px; }
-  .clinic-about__content {
+  .clinic-about .clinic-about__content {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -2512,7 +2633,7 @@ textarea {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center; }
-    .clinic-about__content h3 {
+    .clinic-about .clinic-about__content h3 {
       text-align: center; }
   .why-are {
     padding: 0;
@@ -2542,7 +2663,62 @@ textarea {
       footer .button-group .btn:last-child {
         margin: 0; }
   .drop-menu__box {
-    margin: 0 0 20px; } }
+    margin: 0 0 20px; }
+  .main-page__content {
+    max-width: 630px; }
+  .main-page__slider {
+    right: 0;
+    position: relative;
+    width: 100%; }
+  .main-page__slider-img {
+    width: 100%; }
+  .main-page__slider .slick-prev {
+    left: 42px; }
+  .main-page__slider .slick-next {
+    left: 96px; }
+  .main-page__slider-description {
+    left: auto;
+    right: 40px;
+    width: 609px;
+    padding: 20px 20px 13px;
+    height: 106px; }
+    .main-page__slider-description .size-sale {
+      display: block; }
+  .main-page__slider-img {
+    margin: 0 auto; }
+  .sale-box {
+    width: 145px;
+    height: 145px;
+    top: 27px;
+    left: auto;
+    right: 40px;
+    font-size: 45px;
+    letter-spacing: 2.25px; }
+    .sale-box:before {
+      width: calc(100% - 14px);
+      height: calc(100% - 14px); }
+    .sale-box sub {
+      font-size: 25px;
+      letter-spacing: 1.25px; }
+  .clinic-about-video {
+    padding: 70px 0; }
+    .clinic-about-video .clinic-video {
+      margin: 0 auto 45px; }
+    .clinic-about-video .bg-overlay3 {
+      top: 45px; }
+    .clinic-about-video .bg-overlay2 {
+      top: 30px; }
+    .clinic-about-video .bg-overlay1 {
+      top: 15px; }
+    .clinic-about-video .playpause {
+      width: 45px;
+      height: 45px;
+      bottom: 21px;
+      left: 21px; }
+      .clinic-about-video .playpause img {
+        width: 19px; }
+  .clinic-about .description {
+    margin: 40px 0 0; } }
 
 @media only screen and (max-width: 1040px) {
   .photo-demonstration__wrap {
@@ -2561,7 +2737,13 @@ textarea {
   .about-doctor:before {
     left: -300px; }
   .about-doctor__content ul {
-    padding: 0; } }
+    padding: 0; }
+  .certificate-sale__box {
+    margin: 0 auto 40px; }
+    .certificate-sale__box:last-child {
+      margin: 0 auto; }
+  .section-contacts {
+    margin: -150px 0 0; } }
 
 @media only screen and (max-width: 992px) {
   .specialist-box:nth-child(3), .last-blog__box:nth-child(3) {
@@ -2701,7 +2883,13 @@ textarea {
   .form-box__time label {
     margin: 20px 0 0; }
   .modal__div .modal__wrapper {
-    max-width: 700px; } }
+    max-width: 700px; }
+  h1 {
+    font-size: 35px;
+    padding: 0 0 27px;
+    margin: 0 0 30px; }
+  .breadcrumbs-wrapper {
+    margin: 30px 0 48px; } }
 
 @media only screen and (max-width: 810px) {
   .sale-title {
@@ -2710,7 +2898,13 @@ textarea {
   .name-sale {
     font-size: 30px; }
   .sale-slider__box .description {
-    font-size: 18px; } }
+    font-size: 18px; }
+  .main-page__slider-description {
+    width: 575px; }
+  .btn-selection {
+    display: none; }
+  .main-page__slider-img {
+    margin: 0 0 0 -42px; } }
 
 @media only screen and (max-width: 768px) {
   .main-slider__title {
@@ -2767,7 +2961,32 @@ textarea {
   .footer-menu__item {
     margin: 0 20px 0 0; }
     .footer-menu__item:last-child {
-      margin: 0; } }
+      margin: 0; }
+  .prescription-box {
+    width: 100%;
+    margin: 0 0 50px; }
+    .prescription-box:last-child {
+      margin: 0; }
+  .other-services__content {
+    padding: 0 0 160px; }
+    .other-services__content .slick-arrow {
+      top: auto;
+      -webkit-transform: translate(0);
+              transform: translate(0);
+      bottom: 70px; }
+    .other-services__content .slick-prev {
+      left: 40%; }
+    .other-services__content .slick-next {
+      right: 40%; } }
+
+@media only screen and (max-width: 750px) {
+  .main-page__slider-description {
+    width: 350px;
+    height: 106px; }
+    .main-page__slider-description .size-sale {
+      display: none; }
+    .main-page__slider-description .services-sale__name {
+      font-size: 22px; } }
 
 @media only screen and (max-width: 710px) {
   header .container {
@@ -2785,7 +3004,28 @@ textarea {
     width: calc(100% - 40px); }
   .photo-demonstration__photo {
     width: 49%;
-    height: 330px; } }
+    height: 330px; }
+  .breadcrumbs-wrapper {
+    margin: 20px 0 30px; }
+  .main-page__slider-img {
+    margin: 0 auto; }
+  .main-page__slider-box {
+    height: 350px; }
+  .sale-box {
+    width: 75px;
+    height: 75px;
+    font-size: 25.5px;
+    letter-spacing: 1.28px; }
+    .sale-box:before {
+      width: calc(100% - 6px);
+      height: calc(100% - 6px); }
+    .sale-box sub {
+      font-size: 14px;
+      letter-spacing: 0.7px; }
+  .tools-services__box ul li {
+    width: 100%; }
+  .section-contacts {
+    margin: -180px 0 0; } }
 
 @media only screen and (max-width: 675px) {
   .about-doctor__content {
@@ -2905,7 +3145,51 @@ textarea {
     width: 100%; }
   .form-box__time {
     max-width: 408px;
-    width: 100%; } }
+    width: 100%; }
+  h1 {
+    font-size: 30px; }
+  .list-characteristics li {
+    width: 100%; }
+  .menu-scroll {
+    -ms-flex-pack: distribute;
+        justify-content: space-around; }
+    .menu-scroll li {
+      margin: 0 5px 3px 0; }
+  .main-page__slider-img {
+    height: 100%;
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover; }
+  .main-page__slider .slick-arrow {
+    bottom: auto;
+    top: 0; }
+  .main-page__slider-description {
+    width: 280px;
+    right: auto;
+    left: 50%;
+    -webkit-transform: translate(-50%, 0);
+            transform: translate(-50%, 0); }
+    .main-page__slider-description .services-sale__name {
+      font-size: 18px; }
+  .main-page__slider .slick-prev {
+    left: 20px; }
+  .main-page__slider .slick-next {
+    left: 74px; }
+  .clinic-about-video .clinic-video {
+    width: 100%; }
+    .clinic-about-video .clinic-video .bg-overlay3 {
+      width: calc(100% - 60px); }
+    .clinic-about-video .clinic-video .bg-overlay2 {
+      width: calc(100% - 40px); }
+    .clinic-about-video .clinic-video .bg-overlay1 {
+      width: calc(100% - 20px); }
+  .tools-services__box {
+    width: 100%;
+    margin: 0 0 30px; }
+    .tools-services__box:last-child {
+      margin: 0; }
+  .tools-services {
+    padding: 60px 0; } }
 
 @media only screen and (max-width: 480px) {
   .links-header {
@@ -2923,7 +3207,33 @@ textarea {
   .popular-treatments__box {
     width: 100%; }
   .photo-demonstration__photo {
-    height: 200px; } }
+    height: 200px; }
+  .main-page .button-group {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start; }
+    .main-page .button-group .btn {
+      margin: 0 0 10px; }
+  .popular-question__box .panel_heading .block_title {
+    font-size: 18px; }
+  .popular-question__box .button-group {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    .popular-question__box .button-group .btn {
+      margin: 0 0 10px; }
+  .block_title:after {
+    width: 18px;
+    height: 15px;
+    min-width: 18px; } }
 
 @media only screen and (max-width: 440px) {
   footer .button-group {
@@ -3018,4 +3328,11 @@ textarea {
     font-size: 14px; }
   .sale-title {
     font-size: 60px;
-    margin: 0 auto -40px; } }
+    margin: 0 auto -40px; }
+  .other-services__box {
+    width: 100%; }
+  .certificate-sale__box {
+    width: 290px;
+    height: 214px; }
+    .certificate-sale__box:before {
+      width: 271px; } }
