@@ -129,6 +129,20 @@ $('.sale-slider').slick({
 });
 
 
+$('.main-page__slider').slick({
+    slidesToShow: 1,
+    prevArrow: '<button type="button" class="slick-prev"></button>',
+    nextArrow: '<button type="button" class="slick-next"></button>',
+    fade: true,
+    infinity: true,
+});
+
+// аккордеон
+$('.panel_heading .block_title').click(function () {
+    $(this).toggleClass('in').next().slideToggle();
+    $('.panel_heading .block_title').not(this).removeClass('in').next().slideUp();
+});
+
 $('.playpause').click(function () {
     $('.playpause, .video-poster').fadeOut();
 });
@@ -136,7 +150,7 @@ $('.playpause').click(function () {
 $(".header-bottom .menu__links").click(function (e) {
     e.preventDefault();
     var id = $(this).attr('data-menu'),
-        content = $('.drop-menu[data-menu="'+ id +'"]');
+        content = $('.drop-menu[data-menu="' + id + '"]');
 
     $(".header-bottom .menu__links").removeClass('active');
     $(this).toggleClass('active');
@@ -145,7 +159,7 @@ $(".header-bottom .menu__links").click(function (e) {
     content.toggleClass('active');
 });
 
-$(document).mouseup(function (e){ // событие клика по веб-документу
+$(document).mouseup(function (e) { // событие клика по веб-документу
     var div = $(".menu"); // тут указываем ID элемента
     if (!div.is(e.target) // если клик был не по нашему блоку
         && div.has(e.target).length === 0) { // и не по его дочерним элементам
@@ -192,7 +206,7 @@ $(document).ready(function () {
 
 $('.btn-burger').click(function () {
     $('.overlay').fadeIn();
-   $('.menu-main__nav').fadeIn();
+    $('.menu-main__nav').fadeIn();
 });
 
 $('.btn-close').click(function () {
@@ -219,24 +233,37 @@ $('.mobile-menu .drop-menu__list .item-links').click(function (e) {
 });
 
 $('.btn-menu__mobile').click(function () {
-   $('.mobile-menu').fadeIn();
+    $('.mobile-menu').fadeIn();
 });
 
+//плавный скролл
+$(document).ready(function () {
+    $('.go_to').click(function () {
+        var scroll_el = $(this).attr('href');
+        if ($(scroll_el).length != 0) {
+            $('html, body').animate({
+                scrollTop: $(scroll_el).offset().top
+            }, 500);
+        }
+        return false;
+    });
+});
+//плавный скролл end
 
-$( function() {
+$(function () {
     //Сменим язык календаря на русский
     $.datepicker.setDefaults(
         {
             closeText: 'Закрыть',
             prevText: '',
             currentText: 'Сегодня',
-            monthNames: ['Январь','Февраль','Март','Апрель','Май','Июнь',
-                'Июль','Август','Сентябрь','Октябрь','Ноябрь','Декабрь'],
-            monthNamesShort: ['Янв','Фев','Мар','Апр','Май','Июн',
-                'Июл','Авг','Сен','Окт','Ноя','Дек'],
-            dayNames: ['воскресенье','понедельник','вторник','среда','четверг','пятница','суббота'],
-            dayNamesShort: ['вск','пнд','втр','срд','чтв','птн','сбт'],
-            dayNamesMin: ['Вс','Пн','Вт','Ср','Чт','Пт','Сб'],
+            monthNames: ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь',
+                'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'],
+            monthNamesShort: ['Янв', 'Фев', 'Мар', 'Апр', 'Май', 'Июн',
+                'Июл', 'Авг', 'Сен', 'Окт', 'Ноя', 'Дек'],
+            dayNames: ['воскресенье', 'понедельник', 'вторник', 'среда', 'четверг', 'пятница', 'суббота'],
+            dayNamesShort: ['вск', 'пнд', 'втр', 'срд', 'чтв', 'птн', 'сбт'],
+            dayNamesMin: ['Вс', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб'],
             weekHeader: 'Не',
             dateFormat: 'dd.mm.yy',
             firstDay: 1,
@@ -245,17 +272,17 @@ $( function() {
             yearSuffix: ''
         });
 
-} );
+});
 
-$( function() {
-    $( "#datepicker" ).datepicker();
-} );
+$(function () {
+    $("#datepicker").datepicker();
+});
 
 
 // Инициализация карты
 ymaps.ready(init);
 
-function init () {
+function init() {
 
     //Центрирование и выбор масштаба карты
     var myMap = new ymaps.Map('map', {
@@ -266,7 +293,7 @@ function init () {
     // Создание своей метки
     var myPlacemark = new ymaps.Placemark(
         // Координаты метки
-        [60.000996, 30.251746] , {
+        [60.000996, 30.251746], {
             // Свойства метки
             hintContent: '', //Подсказка при наведении на маркер
 
@@ -287,7 +314,7 @@ function init () {
         // Список типов карты
         .add('typeSelector')
         // Кнопка изменения масштаба - справа
-        .add('smallZoomControl', { right: 5, top: 75 })
+        .add('smallZoomControl', {right: 5, top: 75})
         // Стандартный набор кнопок
         .add('mapTools')
         //Линейка масштаба
