@@ -179,6 +179,12 @@
   .main-page__slider
     right: -120px
 
+  .w-60-tablet
+    width: 59%
+
+  .w-40-tablet
+    width: 39%
+
 @media only screen and (max-width: 1199px)
   header
     .list-social, .btn-search
@@ -649,6 +655,16 @@
       right: 40%
 
 
+  .solve-problems ul li, .category-services__hidden ul li
+    width: 50%
+
+  .category-services__hidden ul li
+    margin: 0 0 7px
+
+
+  .w-25:hover .category-services__hidden
+    padding: 15px 20px
+
 
 @media only screen and (max-width: 750px)
   .main-page__slider-description
@@ -778,6 +794,31 @@
 
   .footer-menu__item
     margin: 0
+
+  .w-100-mobile
+    width: 100%
+
+
+  .category-services__box-column .category-services__box
+    height: 250px
+    margin: 0 0 20px
+    &:last-child
+      margin: 0
+
+  .category-services__box
+    height: 250px
+    &:last-child
+      margin: 0
+
+  .category-services__box:hover .category-services__hidden
+    padding: 20px
+    .name
+      font-size: 20px
+    ul
+      margin: 20px 0 0
+
+  .solve-problems ul li
+    width: 100%
 
 @media only screen and (max-width: 575px)
   .header-call
