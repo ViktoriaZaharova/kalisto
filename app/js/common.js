@@ -155,11 +155,10 @@ $('.photo-demonstration__doc').slick({
             breakpoint: 1400,
             settings: {
                 slidesToShow: 2,
-                dots: false,
             }
         },
         {
-            breakpoint: 1100,
+            breakpoint: 1199,
             settings: {
                 autoplay: true,
                 dots: false,
@@ -187,8 +186,7 @@ $('.certificate-slider__doc').slick({
         {
             breakpoint: 1400,
             settings: {
-                slidesToShow: 4,
-                dots: false,
+                slidesToShow: 2,
             }
         },
         {
@@ -236,13 +234,12 @@ $('.reviews-slider__doc').slick({
         {
             breakpoint: 1400,
             settings: {
-                slidesToShow: 3,
-                dots: false,
+                slidesToShow: 1,
             }
         },
 
         {
-            breakpoint: 1020,
+            breakpoint: 1199,
             settings: {
                 slidesToShow: 2,
                 arrows: false,
@@ -267,7 +264,7 @@ $('.reviews-slider__doc').slick({
 
 // slick active
 $(window).on('load resize', function () {
-    if ($(window).width() > 1400) {
+    if ($(window).width() > 1199) {
         $('.specialist__doc').slick({
             slidesToShow: 2,
             prevArrow: '<button type="button" class="slick-prev"></button>',
@@ -276,9 +273,14 @@ $(window).on('load resize', function () {
             dots: true,
             appendDots: '.specialist__doc-dots',
             responsive: [
-
                 {
-                    breakpoint: 1020,
+                    breakpoint: 1400,
+                    settings: {
+                        slidesToShow: 1,
+                    }
+                },
+                {
+                    breakpoint: 1199,
                     settings: {
                         slidesToShow: 2,
                         arrows: false,

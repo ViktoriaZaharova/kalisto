@@ -2919,11 +2919,6 @@ textarea {
     width: 50%; }
   .other-services__box {
     margin: 0 auto; }
-  .answer-doctor {
-    display: none; }
-  .popular-question__box {
-    width: 100%;
-    margin: 0 0 70px; }
   .certificate-sale__box {
     width: 321px;
     height: 229px;
@@ -2946,70 +2941,24 @@ textarea {
       .certificate-sale__box .price:before, .certificate-sale__box .price:after {
         width: 186px;
         height: 23px; }
-  .wrapper {
-    height: 100%;
-    position: relative;
-    min-height: auto;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    margin: 0; }
-  .wrapper-photo__doctor {
-    display: none; }
-  .main-page__doc-img {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
-    width: 339px;
-    margin: 0 0 0 auto; }
-  .mCSB_inside > .mCSB_container {
-    margin: 0; }
-  .wrapper-content {
-    width: 100%;
-    padding: 0;
-    overflow-y: visible; }
-  .specialist__doc .specialist-box {
-    display: block; }
   .wrapper-content .container {
-    max-width: 1170px;
-    margin: 0 auto; }
-  .main-page__doc .main-page__content {
-    max-width: 660px;
-    padding: 0; }
-  .wrapper-content h2 {
-    text-align: center;
-    margin: 0 auto 30px;
-    padding: 0 0 28px; }
-    .wrapper-content h2:before {
-      left: 50%;
-      -webkit-transform: translate(-50%, 0);
-              transform: translate(-50%, 0); }
-  .wrapper-content .slick-slider {
-    padding: 0; }
-  .wrapper-content .slick-slider .slick-prev {
-    left: -30px; }
-  .wrapper-content .slick-slider .slick-next {
-    right: -30px; }
+    max-width: 640px; }
+  .slider-dots .slick-dots li {
+    width: 22px;
+    height: 5px;
+    margin: 0 4px 0 0; }
+    .slider-dots .slick-dots li:last-child {
+      margin: 0; }
   .wrapper-content .photo-demonstration__photo {
-    width: 236px;
-    height: 315px; }
-  .wrapper-content .period-photo {
-    top: 10px;
-    right: 10px;
-    width: 60px;
-    height: 60px;
-    font-size: 16px; }
-  .wrapper-content .reviews .container, .certificate.p-40 .container, .wrapper-content .specialist .container {
-    padding: 70px 15px; }
-  .wrapper-content .photo-demonstration {
-    padding: 70px 0; }
-  .specialist__doc .slide:last-child {
-    display: none; } }
+    width: 120px;
+    height: 170px; }
+  .specialist__doc .specialist-box {
+    display: block;
+    margin: 0 auto 45px; }
+  .popular-question__box {
+    width: 56%; }
+  .answer-doctor {
+    width: 42%; } }
 
 @media only screen and (max-width: 1320px) {
   .form label {
@@ -3199,6 +3148,80 @@ textarea {
         width: 19px; }
   .clinic-about .description {
     margin: 40px 0 0; }
+  .wrapper-content .photo-demonstration__doc {
+    padding: 0 38px; }
+    .wrapper-content .photo-demonstration__doc .slick-next {
+      right: 0; }
+    .wrapper-content .photo-demonstration__doc .slick-prev {
+      left: 0; }
+    .wrapper-content .photo-demonstration__doc .slick-arrow {
+      width: 20px;
+      height: 35px; }
+  .wrapper-content .photo-demonstration__photo {
+    width: 308px;
+    height: 412px; }
+  .wrapper {
+    height: 100%;
+    position: relative;
+    min-height: auto;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin: 0; }
+  .wrapper-photo__doctor {
+    display: none; }
+  .main-page__doc-img {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    width: 339px;
+    margin: 0 0 0 auto; }
+  .wrapper-content {
+    width: 100%;
+    padding: 0;
+    overflow-y: visible; }
+  .specialist__doc .specialist-box {
+    display: block; }
+  .wrapper-content .container {
+    max-width: 1170px;
+    margin: 0 auto; }
+  .main-page__doc .main-page__content {
+    max-width: 660px;
+    padding: 0; }
+  .wrapper-content h2 {
+    text-align: center;
+    margin: 0 auto 30px;
+    padding: 0 0 28px; }
+    .wrapper-content h2:before {
+      left: 50%;
+      -webkit-transform: translate(-50%, 0);
+              transform: translate(-50%, 0); }
+  .wrapper-content .slick-slider {
+    padding: 0; }
+  .wrapper-content .slick-slider .slick-prev {
+    left: -30px; }
+  .wrapper-content .slick-slider .slick-next {
+    right: -30px; }
+  .wrapper-content .photo-demonstration__photo {
+    width: 236px;
+    height: 315px; }
+  .wrapper-content .period-photo {
+    top: 10px;
+    right: 10px;
+    width: 60px;
+    height: 60px;
+    font-size: 16px; }
+  .wrapper-content .reviews .container, .certificate.p-40 .container, .wrapper-content .specialist .container {
+    padding: 70px 15px; }
+  .wrapper-content .photo-demonstration {
+    padding: 70px 0; }
+  .specialist__doc .slide:last-child {
+    display: none; }
   .main-page__doc-img {
     width: 253px;
     position: absolute;
@@ -3251,18 +3274,11 @@ textarea {
         justify-content: space-around; }
     .specialist__doc .slide:nth-child(3) {
       display: none; }
-  .wrapper-content .photo-demonstration__doc {
-    padding: 0 38px; }
-    .wrapper-content .photo-demonstration__doc .slick-next {
-      right: 0; }
-    .wrapper-content .photo-demonstration__doc .slick-prev {
-      left: 0; }
-    .wrapper-content .photo-demonstration__doc .slick-arrow {
-      width: 20px;
-      height: 35px; }
-  .wrapper-content .photo-demonstration__photo {
-    width: 308px;
-    height: 412px; } }
+  .answer-doctor {
+    display: none; }
+  .popular-question__box {
+    width: 100%;
+    margin: 0 0 70px; } }
 
 @media only screen and (max-width: 992px) {
   .specialist-box:nth-child(3), .last-blog__box:nth-child(3) {
