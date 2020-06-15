@@ -1,6 +1,10 @@
 @import "vars"
 
 
+@media only screen and (max-width: 1800px)
+  .wrapper-photo__doctor
+    width: 52%
+
 @media only screen and (max-width: 1650px)
   .slick-prev
     left: -50px
@@ -151,6 +155,83 @@
         width: 186px
         height: 23px
 
+  .wrapper
+    height: 100%
+    position: relative
+    min-height: auto
+    flex-wrap: wrap
+    margin: 0
+
+
+  .wrapper-photo__doctor
+    display: none
+
+  .main-page__doc-img
+    display: flex
+    align-items: center
+    justify-content: flex-end
+    width: 339px
+    margin: 0 0 0 auto
+
+  .mCSB_inside>.mCSB_container
+    margin: 0
+
+  .wrapper-content
+    width: 100%
+    padding: 0
+    overflow-y: visible
+
+  .specialist__doc
+    .specialist-box
+      display: block
+
+  .wrapper-content .container
+    max-width: 1170px
+    margin: 0 auto
+
+  .main-page__doc
+    .main-page__content
+      max-width: 660px
+      padding: 0
+
+  .wrapper-content h2
+    text-align: center
+    margin: 0 auto 30px
+    padding: 0 0 28px
+    &:before
+      left: 50%
+      transform: translate(-50%,0)
+
+  .wrapper-content .slick-slider
+    padding: 0
+
+  .wrapper-content .slick-slider .slick-prev
+    left: -30px
+
+  .wrapper-content .slick-slider .slick-next
+    right: -30px
+
+  .wrapper-content .photo-demonstration__photo
+    width: 236px
+    height: 315px
+
+  .wrapper-content .period-photo
+    top: 10px
+    right: 10px
+    width: 60px
+    height: 60px
+    font-size: 16px
+
+  .wrapper-content .reviews .container, .certificate.p-40 .container, .wrapper-content .specialist .container
+    padding: 70px 15px
+
+  .wrapper-content .photo-demonstration
+    padding: 70px 0
+
+  .specialist__doc
+    .slide
+      &:last-child
+        display: none
 
 @media only screen and (max-width: 1320px)
   .form
@@ -355,6 +436,28 @@
   .clinic-about .description
     margin: 40px 0 0
 
+  .main-page__doc-img
+    width: 253px
+    position: absolute
+    bottom: 0
+    right: 0
+
+  .tabs__caption
+    margin: 0 0 112px
+
+  .main-page__doc
+    .button-group
+      flex-direction: column
+      align-items: flex-start
+      margin: 0 0 90px
+      .btn
+        margin: 0 0 40px
+        &:last-child
+          margin: 0
+
+  .tabs__content
+    max-width: 495px
+
 @media only screen and (max-width: 1040px)
   .photo-demonstration__wrap
     max-width: 650px
@@ -389,6 +492,26 @@
 
   .section-contacts
     margin: -150px 0 0
+
+  .specialist__doc
+    justify-content: space-around
+    .slide
+      &:nth-child(3)
+        display: none
+
+  .wrapper-content
+    .photo-demonstration__doc
+      padding: 0 38px
+      .slick-next
+        right: 0
+      .slick-prev
+        left: 0
+      .slick-arrow
+        width: 20px
+        height: 35px
+    .photo-demonstration__photo
+      width: 308px
+      height: 412px
 
 @media only screen and (max-width: 992px)
   .specialist-box, .last-blog__box
@@ -665,6 +788,9 @@
   .w-25:hover .category-services__hidden
     padding: 15px 20px
 
+  .main-page__doc .list-characteristics li
+    flex-wrap: wrap
+
 
 @media only screen and (max-width: 750px)
   .main-page__slider-description
@@ -698,7 +824,7 @@
   .bg-overlay2
     width: calc(100% - 40px)
 
-  .photo-demonstration__photo
+  .photo-demonstration__photo, .wrapper-content .photo-demonstration__photo
     width: 49%
     height: 330px
 
@@ -729,6 +855,8 @@
   .section-contacts
     margin: -180px 0 0
 
+  .specialist__doc .slide:nth-child(2)
+    display: none
 
 @media only screen and (max-width: 675px)
   .about-doctor__content
@@ -766,6 +894,9 @@
       justify-content: space-around
       .btn
         margin: 0
+
+  .tabs__content
+    width: calc(100% - 230px)
 
 
 @media only screen and (max-width: 650px)
@@ -851,7 +982,7 @@
   h2
     font-size: 30px
 
-  .photo-demonstration__photo
+  .photo-demonstration__photo, .wrapper-content .photo-demonstration__photo
     height: 270px
 
   .about-doctor:before
@@ -926,6 +1057,19 @@
   .tools-services
     padding: 60px 0
 
+  .main-page__doc-img
+    width: 150px
+
+  .tabs__content
+    width: calc(100% - 110px)
+
+  .tabs__caption
+    margin: 0
+    justify-content: flex-start
+    li
+      width: 50%
+      text-align: center
+
 
 @media only screen and (max-width: 480px)
   .links-header
@@ -949,7 +1093,7 @@
   .popular-treatments__box
     width: 100%
 
-  .photo-demonstration__photo
+  .photo-demonstration__photo, .wrapper-content .photo-demonstration__photo
     height: 200px
 
   .main-page
@@ -1037,6 +1181,25 @@
     .phone
       font-size: 18px
 
+  .wrapper
+    .reviews .line
+      flex-direction: column
+      align-items: center
+      .btn
+        margin: 0 0 10px
+
+  .wrapper-content .photo-demonstration__doc
+    padding: 0
+
+  .tabs__content
+    width: 100%
+
+  .main-page__doc-img
+    position: relative
+    margin: 0 auto
+
+  .main-page .button-group
+    margin: 0 auto 20px
 
 
 @media only screen and (max-width: 360px)
@@ -1059,10 +1222,12 @@
     width: 20px
     height: 3px
 
-  .photo-demonstration__photo
+  .photo-demonstration__photo, .wrapper-content .photo-demonstration__photo
     height: 180px
 
-  .period-photo
+
+
+  .period-photo, .wrapper-content .period-photo
     font-size: 10px
     width: 40px
     height: 40px

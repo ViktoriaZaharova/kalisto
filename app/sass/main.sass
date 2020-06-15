@@ -1127,7 +1127,7 @@ header
       size: contain
 
 //certificate-slider
-.certificate-slider
+.certificate-slider, .certificate-slider__doc
   margin: 0 auto 42px
 
 .certificate-box
@@ -1352,7 +1352,7 @@ header
 
 //footer
 .footer-top
-  padding: 31px 0 16px
+  padding: 15px 0 16px
   border-bottom: 1px solid rgba(#000,.1)
   .container
     align-items: center
@@ -2190,6 +2190,202 @@ textarea
   .category-services__box
     height: 185px
     margin: 0
+
+//wrapper
+.wrapper
+  display: flex
+  align-items: flex-start
+  justify-content: center
+  margin: 0 0 100px
+  height: calc(100vh - 457px)
+  min-height: 1033px
+  .main-page
+    min-height: auto
+  .container
+    height: 100%
+
+.main-page__doc-img
+  display: none
+
+.wrapper-content
+  width: 65%
+  overflow-y: auto
+  height: 100%
+  position: relative
+  padding: 0 10px 0 0
+  .container
+    position: relative
+    max-width: 758px
+    margin: 0 0 0 auto
+  h2
+    text-align: left
+    padding: 0 0 19px
+    margin: 0 0 20px
+    &:before
+      left: 0
+      transform: translate(0)
+  .slick-slider
+    padding: 0 25px
+    .slick-arrow
+      width: 22px
+      height: 38px
+    .slick-next
+      right: 0
+    .slick-prev
+      left: 0
+  .line-title
+    width: 100%
+    display: flex
+    align-items: center
+    justify-content: space-between
+  .photo-demonstration
+    padding: 40px 0
+  .photo-demonstration__photo
+    width: 148.1px
+    height: 197.8px
+  .period-photo
+    width: 38px
+    height: 38px
+    top: 5px
+    right: 10px
+    font-size: 10px
+  .reviews
+    .container
+      padding: 40px 15px
+    .btn-accent
+      margin: 0 33px 0 0
+  .specialist
+    .container
+      padding: 40px 15px
+
+.certificate.p-40
+  .container
+    padding: 40px 15px
+
+
+
+.wrapper-photo__doctor
+  width: 55%
+  height: 100%
+  display: flex
+  justify-content: center
+  align-items: flex-end
+  padding: 0 0 37px 11px
+  position: relative
+  &:before
+    content: ''
+    position: absolute
+    bottom: 0
+    left: 50%
+    transform: translate(-50%,0)
+    height: 37px
+    width: 583px
+    background: url("../img/shadow-doc.png") no-repeat center
+      size: contain
+  img
+    height: 100%
+    width: auto
+
+.slider-dots
+  position: relative
+  .slick-dots
+    width: auto
+    position: relative
+    bottom: 0
+    justify-content: flex-end
+    margin: 0 0 39px
+    .slick-active
+      background: #d49c5f
+    li
+      background: rgba(#000, .1)
+
+.scroll-wrapper
+  &::-webkit-scrollbar
+    width: 12px
+    height: 12px
+    border-radius: 6px
+    background: #f2f2f2
+  &::-webkit-scrollbar-track
+    background-color: #9567ac
+  &::-webkit-scrollbar-track-piece
+    background-color: #f2f2f2
+    border-radius: 6px
+  &::-webkit-scrollbar-thumb
+    background-color: #9567ac
+    width: 6px
+    height: 6px
+    border-radius: 6px
+  &::-webkit-scrollbar-corner
+    background-color: #f2f2f2
+    border-radius: 6px
+    width: 6px
+    height: 6px
+  &::-webkit-resizer
+    background-color: #9567ac
+    width: 6px
+    height: 6px
+
+.tabs__content
+  display: none /* по умолчанию прячем все блоки */
+  flex-direction: column
+  align-items: flex-start
+
+.tabs__content.active
+  display: flex /* по умолчанию показываем нужный блок */
+
+.tabs__caption
+  width: 100%
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-between
+  align-items: center
+  margin: 0 0 21px
+  li
+    color: #4d4d4d
+    font-weight: 600
+    position: relative
+    padding: 0 0 13px
+    cursor: pointer
+    &:before
+      content: ''
+      transition: .3s ease
+      transform: translate(-50%,0)
+      position: absolute
+      left: 50%
+      bottom: 8px
+      width: 100%
+      height: 4px
+      background: #69419e
+      opacity: 0
+    &:after
+      content: ''
+      position: absolute
+      left: 50%
+      bottom: 0
+      transform: translate(-50%,0)
+      width: 0
+      height: 0
+      border-left: 8px solid transparent
+      border-right: 8px solid transparent
+      border-top: 8px solid #69419e
+      transition: .3s ease
+      opacity: 0
+  .active
+    color: #69419e
+    &:before, &:after
+      opacity: 1
+
+.main-page__doc
+  .list-characteristics
+    li
+      align-items: flex-start
+      width: 100%
+      p
+        min-width: auto
+        font-weight: bold
+        margin: 0 5px 0 0
+  .main-page__content
+    max-width: none
 
 @import "media"
 // Всегда в конце

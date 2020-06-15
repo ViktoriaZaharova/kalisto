@@ -137,8 +137,172 @@ $('.main-page__slider').slick({
     infinity: true,
 });
 
+$('ul.tabs__caption').on('click', 'li:not(.active)', function () {
+    $(this)
+        .addClass('active').siblings().removeClass('active')
+        .closest('div.tabs').find('div.tabs__content').removeClass('active').eq($(this).index()).addClass('active');
+});
+
+$('.photo-demonstration__doc').slick({
+    slidesToShow: 2,
+    prevArrow: '<button type="button" class="slick-prev"></button>',
+    nextArrow: '<button type="button" class="slick-next"></button>',
+    infinity: true,
+    dots: true,
+    appendDots: '.photo-demonstration__slider-dots',
+    responsive: [
+        {
+            breakpoint: 1400,
+            settings: {
+                slidesToShow: 2,
+                dots: false,
+            }
+        },
+        {
+            breakpoint: 1100,
+            settings: {
+                autoplay: true,
+                dots: false,
+                autoplaySpeed: 2000,
+            }
+        },
+        {
+            breakpoint: 1040,
+            settings: {
+                slidesToShow: 1,
+                dots: false,
+            }
+        }
+    ]
+});
+
+$('.certificate-slider__doc').slick({
+    slidesToShow: 3,
+    prevArrow: '<button type="button" class="slick-prev"></button>',
+    nextArrow: '<button type="button" class="slick-next"></button>',
+    infinity: true,
+    dots: true,
+    appendDots: '.certificate-slider__doc-dots',
+    responsive: [
+        {
+            breakpoint: 1400,
+            settings: {
+                slidesToShow: 4,
+                dots: false,
+            }
+        },
+        {
+            breakpoint: 1199,
+            settings: {
+                slidesToShow: 3,
+                arrows: false,
+                autoplay: true,
+                autoplaySpeed: 2000,
+                dots: false,
+
+            }
+        },
+        {
+            breakpoint: 640,
+            settings: {
+                slidesToShow: 2,
+                arrows: false,
+                autoplay: true,
+                autoplaySpeed: 2000,
+                dots: false,
+            }
+        },
+        {
+            breakpoint: 440,
+            settings: {
+                slidesToShow: 1,
+                arrows: false,
+                autoplay: true,
+                autoplaySpeed: 2000,
+                dots: false,
+            }
+        }
+    ]
+});
+
+$('.reviews-slider__doc').slick({
+    slidesToShow: 2,
+    prevArrow: '<button type="button" class="slick-prev"></button>',
+    nextArrow: '<button type="button" class="slick-next"></button>',
+    infinity: true,
+    dots: true,
+    appendDots: '.reviews-slider__doc-dots',
+    responsive: [
+        {
+            breakpoint: 1400,
+            settings: {
+                slidesToShow: 3,
+                dots: false,
+            }
+        },
+
+        {
+            breakpoint: 1020,
+            settings: {
+                slidesToShow: 2,
+                arrows: false,
+                autoplay: true,
+                autoplaySpeed: 2000,
+                dots: false,
+            }
+        },
+        {
+            breakpoint: 690,
+            settings: {
+                slidesToShow: 1,
+                arrows: false,
+                autoplay: true,
+                autoplaySpeed: 2000,
+                dots: false
+            }
+        }
+    ]
+});
+
+
 // slick active
-$(window).on('load resize', function() {
+$(window).on('load resize', function () {
+    if ($(window).width() > 1400) {
+        $('.specialist__doc').slick({
+            slidesToShow: 2,
+            prevArrow: '<button type="button" class="slick-prev"></button>',
+            nextArrow: '<button type="button" class="slick-next"></button>',
+            infinity: true,
+            dots: true,
+            appendDots: '.specialist__doc-dots',
+            responsive: [
+
+                {
+                    breakpoint: 1020,
+                    settings: {
+                        slidesToShow: 2,
+                        arrows: false,
+                        autoplay: true,
+                        autoplaySpeed: 2000,
+                    }
+                },
+                {
+                    breakpoint: 690,
+                    settings: {
+                        slidesToShow: 1,
+                        arrows: false,
+                        autoplay: true,
+                        autoplaySpeed: 2000,
+                    }
+                }
+            ]
+        });
+
+
+    } else {
+        $(".specialist__doc.slick-initialized").slick("unslick");
+
+    }
     if ($(window).width() < 1400) {
         $('.other-services__content:not(.slick-initialized)').slick({
             infinite: true,
@@ -160,6 +324,7 @@ $(window).on('load resize', function() {
                 }
             ]
         });
+
     } else {
         $(".other-services__content.slick-initialized").slick("unslick");
     }
